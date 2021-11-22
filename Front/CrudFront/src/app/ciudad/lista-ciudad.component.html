@@ -1,0 +1,50 @@
+<div class="jumbotron jumbotron-fluid bg-white">
+  <div class="container text-center">
+    
+    <br>
+    <h1 class="display-4">CIUDADES COLOMBIA</h1>
+    <br>
+    
+    
+  </div>
+</div>
+  <div class="container text-center">
+    <img               
+    src="https://www.puntopropiedad.com/noticias/wp-content/uploads/2019/02/colombia-seguridad.jpg" 
+    class="header__image"/>
+    <br>
+    <br>
+
+  </div>
+  
+  <div class="container text-center mb-5 mb-lg-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Ciudad</th>        
+        <th scope="col">Detalles</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ciudad of ciudades">        
+        <td>{{ciudad.id}}</td>
+        <td>{{ciudad.nombre}}</td>
+        <td><button class="btn btn-outline-primary" routerLink="/detalle/{{ciudad.id}}"> <i class="far fa-eye"></i> Información</button></td>  
+        <td><button class="btn btn-outline-secundary" routerLink="/editar/{{ciudad.id}}"> <i class="far fa-edit"></i> Editar</button></td> 
+        <td><button class="btn btn-outline-danger" (click)="borrar(ciudad.id)"> <i class="fas fa-trash"></i> Eliminar</button></td>      
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+
+  <footer class="footer bg-danger small text-center text-white-50"><div class="container px-4 px-lg-5">Proyecto - Brayan Romero </div></footer>
+  
+ 
+
+
+
